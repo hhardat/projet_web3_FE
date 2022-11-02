@@ -1,15 +1,10 @@
-"# projet_web3_FE" 
+# Repository du Backend de notre Projet de WEB3
 
-echo "# projet_web3_FE" >> README.md
+    Auteur: 
 
-git init
-
-git add README.md
-
-git commit -m "first commit"
-
-git branch -M main
-
-git remote add origin https://github.com/hhardat/projet_web3_FE.git
-
-git push -u origin main
+    [Cédric Niyikiza](https://github.com/CedricNiyiVinci)
+    [Hugo Hardat] (https://github.com/hhardat)
+    [Anis Assaidi](https://github.com/anistricks)
+    [Rubain Kamegneson Wabo] (https://github.com/rubainwabo)
+    
+# Technologies utilisées
