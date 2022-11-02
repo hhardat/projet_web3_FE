@@ -1,4 +1,4 @@
-# Repository du Backend de notre Projet de WEB3
+# Repository du Frontend de notre Projet de WEB3
 
     Auteur: 
 
