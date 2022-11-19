@@ -1,6 +1,6 @@
-const Product = ({name,price, category}) => {
+const Product = ({product}) => {
     return (
-        <p>{name} : {price} [{category}]</p>
+        <p>{product.name} : {product.price} [{product.category}]</p>
     )
 }
 

@@ -10,7 +10,7 @@ const ProductList = ({products}) => {
           {products.map((product) => (
             <li key={product.id}>
               <Link  href={`/products/${product.id}`}>
-                    <Product {...product} />              
+                    <Product product={product} />              
               </Link>
             </li>
           ))}

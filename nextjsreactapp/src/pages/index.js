@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from "react";
-import Product from "components/Product/Product";
-import axios from 'axios'
-import ProductList from "components/Product/ProductList";
+import Link from 'next/link';
 
-export const getStaticProps = async context => {
-  const result = await axios.get("http://localhost:3001/products")
-  return {
-    props: {
-      products : result.data
-    },
-  };
-};
-
-const IndexPage = ({products}) =>{
+const IndexPage = () =>{
   return(
     <div>
-      <ProductList products={products}/>
+      <h1>Web shop</h1>
+      <Link href="/products">Products</Link>
     </div>
   )
 };
