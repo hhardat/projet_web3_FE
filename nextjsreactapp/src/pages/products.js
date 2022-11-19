@@ -3,7 +3,7 @@ import axios from 'axios'
 import ProductList from "components/Product/ProductList";
 
 export const getStaticProps = async () => {
-  const result = await axios.get("http://localhost:3000/products")
+  const result = await axios.get("http://localhost:3001/products")
   return {
     props: {
       products : result.data
