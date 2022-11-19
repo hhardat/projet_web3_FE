@@ -1,22 +1,35 @@
-const HomePage =() => {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Hello World
-          </p>
-          <a
-            className="App-link"
-            href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/HelloWorld.svg/1200px-HelloWorld.svg.png"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            📷
-          </a>
-        </header>
+import { useState, useEffect } from "react";
+import Product from "components/Product/Product";
+import axios from 'axios'
+
+const HomePage = () => {
+  const [products, setProducts] = useState([]);
+
+  // recupération de la dat GET
+  const hook = () => {
+    console.log("effect");
+    axios.get("http://localhost:3001/products").then((response) => {
+      console.log("promise fulfilled", response.data);
+      //setTimeout(() => setNotes(response.data), 5000)
+      setProducts(response.data);
+    });
+  };
+
+  useEffect(hook, []);
+
+  return (
+    <div>
+      <div>
+        <h1>Products</h1>
+        <ul>
+          {products.map((p) => (
+            // <Note key={note.id} note={note} />
+            <Product  key={p.id} product={p} />
+          ))}
+        </ul>
       </div>
-    );
-  }
-  
-  export default HomePage;
-  
+    </div>
+  );
+};
+
+export default HomePage;
