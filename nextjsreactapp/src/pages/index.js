@@ -1,35 +1,24 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Product from "components/Product/Product";
 import axios from 'axios'
+import ProductList from "components/Product/ProductList";
 
-const HomePage = () => {
-  const [products, setProducts] = useState([]);
-
-  // recupération de la dat GET
-  const hook = () => {
-    console.log("effect");
-    axios.get("http://localhost:3001/products").then((response) => {
-      console.log("promise fulfilled", response.data);
-      //setTimeout(() => setNotes(response.data), 5000)
-      setProducts(response.data);
-    });
+export const getStaticProps = async context => {
+  const result = await axios.get("http://localhost:3001/products")
+  return {
+    props: {
+      products : result.data
+    },
   };
-
-  useEffect(hook, []);
-
-  return (
-    <div>
-      <div>
-        <h1>Products</h1>
-        <ul>
-          {products.map((p) => (
-            // <Note key={note.id} note={note} />
-            <Product  key={p.id} product={p} />
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
 };
 
-export default HomePage;
+const IndexPage = ({products}) =>{
+  return(
+    <div>
+      <code>{JSON.stringify(products)}</code>
+      <ProductList products={products}/>
+    </div>
+  )
+};
+
+export default IndexPage;
