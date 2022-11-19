@@ -1,18 +1,30 @@
+import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 function NavBar() {
   return (
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="black" variant="dark" fixed='top'>
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home">Shop</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-          <input type="text" class='Searchbar_input__NfaB1' placeholder='Search for products...'/>
+            <Nav.Link href="#all">All</Nav.Link>
+            <Nav.Link href="#new">New</Nav.Link>
+          </Nav> 
+          <Form className="d-flex">
+                  <Form.Control
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                    variant="black"
+                  />
+                  <Button variant="dark">Search</Button>
+                </Form>
+          
+
         </Container>
       </Navbar>
   );
