@@ -15,7 +15,6 @@ export const getStaticProps = async context => {
 const IndexPage = ({products}) =>{
   return(
     <div>
-      <code>{JSON.stringify(products)}</code>
       <ProductList products={products}/>
     </div>
   )
