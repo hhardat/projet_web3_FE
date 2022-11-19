@@ -19,7 +19,7 @@ function NavBar() {
                     placeholder="Search"
                     className="me-2"
                     aria-label="Search"
-                    variant="black"
+                    
                   />
                   <Button variant="dark">Search</Button>
                 </Form>
