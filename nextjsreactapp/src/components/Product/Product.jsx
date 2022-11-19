@@ -1,8 +1,6 @@
-const Product = ({product}) => {
+const Product = ({name,price, category}) => {
     return (
-        <li key={product.id}>
-            {product.name}
-        </li>
+        <p>{name} : {price} [{category}]</p>
     )
 }
 
