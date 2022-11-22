@@ -1,5 +1,7 @@
 import Product from "components/Product/Product";
-import axios from 'axios'
+import axios from 'axios';
+
+
 
 export const getStaticProps = async ({ params }) => {
 
@@ -7,13 +9,9 @@ export const getStaticProps = async ({ params }) => {
 
     const product = await axios.get(`http://localhost:3001/products/${id}`);
     
-    const image = await axios.get(`http://localhost:3001/photos/${product.data.pathImage}`);
-    
-    console.log(Object.keys(image))
     return {
         props : {
-            product : product.data,
-            image : image.data
+          product : product.data
         }
     };
 }
