@@ -8,7 +8,6 @@ const App = () => {
   return (
     <div>
       <NavBar />
-      
       <br></br>
       <Home> </Home>
       </div>

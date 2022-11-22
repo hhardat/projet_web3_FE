@@ -1,28 +1,12 @@
 import ProductList from "../Product/ProductList";
-import Navbar from "../NavBar/NavBar";
 //import { Routes } from 'react-router-dom';
 
 const Home = () => {
- 
-  
-  
   return(
-    <div>
-      <Navbar></Navbar>
-     
-      
-      
-      
-      
+    <div>     
       <ProductList></ProductList>
-    
-      
- </div>
+    </div>
   )
-   
- 
-
-  
 }
   export default Home;
   /*
