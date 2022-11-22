@@ -8,8 +8,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <br></br>
-      <br></br>
+      
       <br></br>
       <Home> </Home>
       </div>
