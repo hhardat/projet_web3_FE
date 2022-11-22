@@ -1,0 +1,14 @@
+
+.products{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+.products img{
+   width:40%;
+}
+
+.product {
+    padding: 40px;
+}
