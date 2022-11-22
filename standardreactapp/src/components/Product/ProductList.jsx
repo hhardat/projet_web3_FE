@@ -17,7 +17,7 @@ const ProductList = () => {
     <div>
       <div className="products">
         {products.map((product)=>(
-        <div className="product" >
+        <div className="product" onClick={displayProduct(product.id)}>
           <h3>{product.name}</h3>
           <img src={product.imgUrl}/> 
           <h4>{product.price} $</h4>
