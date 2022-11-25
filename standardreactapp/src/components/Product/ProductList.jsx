@@ -15,6 +15,9 @@ const ProductList = ({ products }) => {
           <div className="product">
           <h3>{product.name}</h3>
           <img src={`http://localhost:3001/photos/${product.pathImage}`} alt={product.name}/> 
+          
+          <h4>{product.stars} </h4>
+          
           <h4>{product.price} $</h4>
           </div>
         </Link>
