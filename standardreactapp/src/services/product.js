@@ -6,9 +6,5 @@ const getProducts = () => {
     return request.then(response => response.data);
 }
 
-const getProduct = (id) => {
-    const request = axios.get(`${baseUrl}/${id}`);
-    return request.then(response => response.data);
-}
-
-export default { getProducts, getProduct };
+// eslint-disable-next-line import/no-anonymous-default-export
+export default { getProducts };

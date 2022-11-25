@@ -1,27 +1,23 @@
-import { useState, useEffect } from 'react';
-import productService from '../../services/product';
+import React from 'react';
+import {Link, useParams} from 'react-router-dom';
 
-const ProductList = () => {
-  const [products, setProducts] = useState([]);
-  const hook = () => {
-     console.log('effect');
-     productService
-     .getProducts()
-     .then(initialProducts => {
-       setProducts(initialProducts);
-     });
+const ProductList = ({ products }) => {
+
+  const category = useParams().category;
+  if(category){
+    products = products.filter(p => p.category === category);
   }
-  useEffect(hook, []);
-  
   return(
     <div>
       <div className="products">
         {products.map((product)=>(
-        <div className="product" onClick={displayProduct(product.id)}>
+        <Link to={`/product/${product.id}`}>
+          <div className="product">
           <h3>{product.name}</h3>
-          <img src={product.imgUrl}/> 
+          <img src={`http://localhost:3001/photos/${product.pathImage}`} alt={product.name}/> 
           <h4>{product.price} $</h4>
           </div>
+        </Link>
           ))}
       </div>
     </div>

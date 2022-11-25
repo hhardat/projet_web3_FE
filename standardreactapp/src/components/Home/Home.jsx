@@ -1,10 +1,10 @@
 import ProductList from "../Product/ProductList";
 //import { Routes } from 'react-router-dom';
 
-const Home = () => {
+const Home = ({ products }) => {
   return(
     <div>     
-      <ProductList></ProductList>
+      <ProductList products={products}></ProductList>
     </div>
   )
 }
