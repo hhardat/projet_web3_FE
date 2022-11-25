@@ -26,11 +26,24 @@ Le HTML créer sur base du composant React sera générer au sein du serveur Nex
 
 Mais le ServerSideRendering n'est pas magique et il est à utiliser avec parcimonie car il est plus couteux en temps par rapport SSG, car le serveur NextJS se doit de d'abord récupérer les données et ensuite de générer le HTML correspondant 
 
+# Quand est-ce que le SSG est utilisé?
+
+D'après NextJS il est intéressant de l'utiliser au maximum au sein de notre application. Mais il y a des cas où il est intéressant de l'utiliser et d'autre pas.
+
+Avant de coder une page qui sera statiquement générer il faut se demander:
+
+> Puis-je me permettre de pré-rendre la page avant la requête de l'utilisateur?
+Si la réponse est:
+- Oui:
+  - Alors on utilise le SSG
+- Sinon :
+  - Cela veut dire qu'on ne peut pas prégénérer la page, car on a par exemple besoin de montrer a l'utilisateur des données plus fraiches, des données qui peuvent potentiellement changé à chaque requête. Dans ce que là, il sera plus intéressant de se tourner vers du Server Side Rendering.
 
 # Quand est-ce que le SSR est requis?
 
-Lorsqu'on a besoin de récupérer des données à chaque requête.
+Lorsqu'on a besoin de récupérer des données à chaque utilisé.
 
+[a completer]
 # getServerSideProps
 
 - est lancé côté serveur et jamais côté client.
