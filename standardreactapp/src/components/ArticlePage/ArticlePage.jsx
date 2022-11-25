@@ -1,5 +1,6 @@
 import React from "react";
-import { useParams } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
+import Back from '../Img/back.jpg';
 
 const ArticlePage = ({ products }) => {
     const id = useParams().id;
@@ -29,6 +30,9 @@ const ArticlePage = ({ products }) => {
                 <br />
                 <div className="p-2">
                     <p className='text-light'>{product.stars} étoiles</p>
+                </div>
+                <div className="p-2">
+                <Link to={`/`} >        {<img src={Back} alt="" style={{height:'10vh'}} />}   </Link>
                 </div>
             </div>
         </div>
