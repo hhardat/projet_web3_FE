@@ -2,7 +2,6 @@ import Product from "components/Product/Product";
 import axios from 'axios';
 
 
-
 export const getStaticProps = async ({ params }) => {
 
     const {id} = params;
@@ -29,7 +28,7 @@ export async function getStaticPaths() {
 };
 }
 
-  export default function ProductPage({ product, image }) {
+  export default function ProductPage({product, image }) {
   
     return (
         <div>

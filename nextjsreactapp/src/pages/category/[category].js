@@ -1,6 +1,8 @@
-import Link from 'next/link';
 import axios from 'axios'
 import ProductList from "components/Product/ProductList";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useRouter } from 'next/router'
+
 
 export const getServerSideProps = async () => {
   const result = await axios.get("http://localhost:3001/products")
@@ -11,12 +13,12 @@ export const getServerSideProps = async () => {
   };
 };
 
-export default function ProductPage({ products }) {
-    return (
+export default function indexPage({ products }) {
+  const router = useRouter()
+  const category = router.query.category
+  products = products.filter(p => p.category===category)
+  return (
         <div>
-            <Link href="/">Home</Link>
-            <h1>Products</h1>
-
             <ProductList products={ products } />
         </div>
     );

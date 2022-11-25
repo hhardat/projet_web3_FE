@@ -1,12 +1,21 @@
-import Link from 'next/link';
+import axios from 'axios'
+import ProductList from "components/Product/ProductList";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const IndexPage = () =>{
-  return(
-    <div>
-      <h1>Web shop</h1>
-      <Link href="/products">Products</Link>
-    </div>
-  )
+
+export const getServerSideProps = async () => {
+  const result = await axios.get("http://localhost:3001/products")
+  return {
+    props: {
+      products : result.data
+    },
+  };
 };
 
-export default IndexPage;
+export default function indexPage({ products }) {
+    return (
+        <div>
+            <ProductList products={ products } />
+        </div>
+    );
+}
