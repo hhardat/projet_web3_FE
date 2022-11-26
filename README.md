@@ -23,6 +23,10 @@ Les deux versions de notre application, que ce soit celle en React ou celle en N
 La version de l'application développée en React effectue notamment du client side rendering (CSR) tant dis que celle developpée en NextJs fait du server side rendering (SSR) et du client side rendering (CSR).
 
 
+**Dépendance**
+
+Pour exécuter le frontend de l'application, il est primordial de lancer l'exécution du backend. (cf partie backend)
+
 **Version NextJs (nextjsreactapp)**
 
 ```
