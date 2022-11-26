@@ -44,7 +44,7 @@ _mode compilé (build)_
 
 ```
 
-npm build
+npm run build
 npm start
 
 ```
