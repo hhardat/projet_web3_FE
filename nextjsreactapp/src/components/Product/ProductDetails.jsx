@@ -1,6 +1,6 @@
 import React from "react";
 import Link from 'next/link';
-import Back from './back.jpg';
+import Back from '../../../public/back.jpg';
 
 const ProductDetails = ({ product }) => {
     return(
