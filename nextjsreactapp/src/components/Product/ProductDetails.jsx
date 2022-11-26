@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Back from './back.jpg';
 
 const ProductDetails = ({ product }) => {
-    console.log(Back)
     return(
         <div className='d-flex flex-row ' style={{height: '100vh'}}>
             <div className="p-2 ">
