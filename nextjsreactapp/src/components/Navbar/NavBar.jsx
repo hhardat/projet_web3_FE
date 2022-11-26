@@ -3,8 +3,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const NavBar = ({categories}) => {
-  console.log(categories);
+const NavBar = () => {
+  const categories = ["Ordinateur Portable", "Alimentations pour ordinateur","Casques VR",
+                    "Imprimantes & périphériques","Casques de bureau","Téléphonie","Tablettes & liseuses",
+                    "Télévision & vidéoprojecteur","Mémoire vive & stockage"]
   return (
       <Navbar bg="black" variant="dark">
         <Container fluid>
