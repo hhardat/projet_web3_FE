@@ -1,4 +1,4 @@
-import Product from "components/Product/Product";
+import ProductDetails from "components/Product/ProductDetails";
 import axios from 'axios';
 
 
@@ -29,11 +29,11 @@ export async function getStaticPaths() {
 };
 }
 
-  export default function ProductPage({ product, image }) {
-  
-    return (
-        <div>
-            <Product product={product} image={image} />
-        </div>
-    );
-  }
+export default function ProductPage({product}) {
+
+  return (
+      <div>
+          <ProductDetails product={product}/>
+      </div>
+  );
+}

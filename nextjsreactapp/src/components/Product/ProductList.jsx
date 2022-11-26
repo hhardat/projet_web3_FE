@@ -6,15 +6,17 @@ const ProductList = ({products}) => {
     if(!products) return null
 
     return (
-        <ul>
+        <div>
+          <div className="products">
           {products.map((product) => (
-            <li key={product.id}>
-              <Link  href={`/products/${product.id}`}>
-                    <Product product={product} />              
+            <div key={product.id}>
+              <Link href={`/products/${product.id}`}>
+                  <Product product={product}/>              
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+          </div>
+        </div>
     )
 }
 

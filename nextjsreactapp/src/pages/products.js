@@ -16,7 +16,6 @@ export default function ProductPage({ products }) {
         <div>
             <Link href="/">Home</Link>
             <h1>Products</h1>
-
             <ProductList products={ products } />
         </div>
     );
