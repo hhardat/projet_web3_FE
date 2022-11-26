@@ -14,7 +14,7 @@ Auteur:
 
 **But fonctionnel de l'application**
 
-Pour notre projet, nous avons developpé 2 sites identiques, le premier en utilisant le framework standard React, le deuxième en utilisant le framework NextJs. Ceci nous a notamment permis mettre en gros plan les avantages du framework NextJs par rapport à React.
+Pour notre projet, nous avons developpé deux sites identiques, le premier en utilisant le framework standard Reactet le deuxième en utilisant le framework NextJs. Ceci nous a notamment permis de mettre en gros plan les avantages du framework NextJs par rapport à React.
 
 **Architecture et type de rendu (rendering)**
 
