@@ -29,11 +29,11 @@ export async function getStaticPaths() {
 };
 }
 
-  export default function ProductPage({ product, image }) {
-  
-    return (
-        <div>
-            <ProductDetails product={product} image={image} />
-        </div>
-    );
-  }
+export default function ProductPage({product}) {
+
+  return (
+      <div>
+          <ProductDetails product={product}/>
+      </div>
+  );
+}
