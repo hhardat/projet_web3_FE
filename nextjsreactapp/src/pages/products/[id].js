@@ -1,4 +1,4 @@
-import Product from "components/Product/Product";
+import ProductDetails from "components/Product/ProductDetails";
 import axios from 'axios';
 
 
@@ -33,7 +33,7 @@ export async function getStaticPaths() {
   
     return (
         <div>
-            <Product product={product} image={image} />
+            <ProductDetails product={product} image={image} />
         </div>
     );
   }
