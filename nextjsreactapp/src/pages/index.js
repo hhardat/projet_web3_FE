@@ -1,10 +1,20 @@
 import Link from 'next/link';
+import axios from 'axios'
+import ProductList from "components/Product/ProductList";
 
-const IndexPage = () =>{
+export const getServerSideProps = async () => {
+  const result = await axios.get("http://localhost:3001/products")
+  return {
+    props: {
+      products : result.data
+    },
+  };
+};
+
+const IndexPage = ({products}) =>{
   return(
     <div>
-      <h1>Web shop</h1>
-      <Link href="/products">Products</Link>
+      <ProductList products={products}/>
     </div>
   )
 };
