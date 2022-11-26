@@ -33,7 +33,20 @@ Pour exécuter le frontend de l'application, il est primordial de lancer l'exéc
 git clone
 cd nextjsapp
 npm install
+
+```
+_mode dev_
+```
 npm run dev
+
+```
+_mode compilé (build)_
+
+```
+
+npm build
+npm start
+
 ```
 
 **Version React (standardreactapp)**
