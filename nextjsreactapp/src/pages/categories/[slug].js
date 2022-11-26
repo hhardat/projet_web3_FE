@@ -6,7 +6,6 @@ export const getStaticProps = async ({params}) => {
 
   const category = await axios.get(`http://localhost:3001/categories?slug=${slug}`);
 
-  console.log(category.data[0].uriName)
   const products = await axios.get(`http://localhost:3001/products?category=${category.data[0].uriName}`);
 
   return {
@@ -20,7 +19,7 @@ export const getStaticProps = async ({params}) => {
 
 export async function getStaticPaths(){
   const {data : categories} = await axios.get(`http://localhost:3001/categories`);
-  
+
   return {
     paths: categories.map((c) => ({
       params: {

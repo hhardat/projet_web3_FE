@@ -10,14 +10,11 @@ const NavBar = () => {
   const [categories, setCategories] = useState([]);
   // recupération de la dat GET 
   const hook = () => {
-    console.log('effect')
     axios
       .get('http://localhost:3001/categories')
       .then(response => {
-        console.log('promise fulfilled')
         //setTimeout(() => setNotes(response.data), 5000)
         setCategories(response.data)
-        console.log(categories)
       })
   }
   
