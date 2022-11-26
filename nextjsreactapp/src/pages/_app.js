@@ -1,3 +1,6 @@
+import '../style/global.css'
+import 'bootstrap/dist/css/bootstrap.css'
+
 const App = ({Component, pageProps}) => {
     return (
       <Component {...pageProps}/>);
