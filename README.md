@@ -53,7 +53,7 @@ npm start
 
 ```
 git clone
-cd nextjsapp
+cd standardreactapp
 npm install
 npm start
 ```
