@@ -10,7 +10,7 @@ Auteur:
 
 [Rubain Kamegneson Wabo](https://github.com/rubainwabo)
     
-# Frontend de l'application ElectroShop
+# Frontend de l'application Shop
 
 **But fonctionnel de l'application**
 
