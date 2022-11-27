@@ -20,7 +20,7 @@ Pour notre projet, nous avons developpé deux sites identiques, le premier en ut
 
 Les deux versions de notre application, que ce soit celle en React ou celle en NextJs, utilisent l'architecture SPA (single page application).
 
-La version de l'application développée en React effectue notamment du client side rendering (CSR) tant dis que celle developpée en NextJs fait du pre-rendering dont du Server Side Generation (SSG) ou Static Generation et du Server Side Rendering (SSR), elle fait également du client side rendering (CSR).
+La version de l'application développée en React effectue notamment du client side rendering (CSR) tant dis que celle developpée en NextJs fait du pre-rendering dont du Static-site Generation (SSG) ou Static Generation et du Server Side Rendering (SSR), elle fait également du client side rendering (CSR).
 
 
 **Dépendance**
